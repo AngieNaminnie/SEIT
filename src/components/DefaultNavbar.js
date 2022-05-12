@@ -115,27 +115,27 @@ export default function DefaultNavbar() {
                                
                                 &nbsp;Clientes
                             </NavLink>
-                            {/* <NavLink */}
+                            <NavLink 
                                 href="https://github.com/creativetimofficial/material-tailwind/issues?ref=mtk"
                                 target="_blank"
                                 rel="noreferrer"
                                 ripple="light"
-                            {/* > */}
+                            > 
                                 Issues
-                            {/* </NavLink> */}
-                            {/* <a */}
+                             </NavLink> 
+                             <a 
                                 href="https://www.creative-tim.com/product/material-tailwind-kit-react"
                                 target="_blank"
                                 rel="noreferrer"
-                            {/* > */}
-                                {/* <Button */}
+                             > 
+                                 <Button 
                                     color="transparent"
                                     className="bg-white text-black ml-4"
                                     ripple="dark"
-                                {/* > */}
+                                 > 
                                     Free Download
-                                {/* </Button> */}
-                            </a>
+                                 </Button> 
+                                 </a>
                         </div>
                     </Nav>
                 </NavbarCollapse>
@@ -143,4 +143,4 @@ export default function DefaultNavbar() {
         </Navbar>
     );
 }
-   
+
