@@ -143,6 +143,9 @@ export default function WorkingSection() {
                 <section>
                     <div class='grid'>
                     <div class=' justify-items-center p-10 mt-20 w-72 h-24 rounded-lg bg-red-700 shadow-2xl '>
+                     <div class='text-4xl text-center font-semibold text-stone-50 align-middle'>
+                     Clientes
+                     </div>
                     </div>
                     </div>
                     

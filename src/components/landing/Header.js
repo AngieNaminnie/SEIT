@@ -10,10 +10,8 @@ export default function Header() {
                     <div className="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
                         <H2 color="white">Soluciones empresariales en Informatica y tecnología</H2>
                         <LeadText color="gray-200">
-                                This is a simple example of a Landing Page you
-                                can build using Material Tailwind. It features
-                                multiple components based on the Tailwind CSS
-                                and Material Design by Google.
+                                
+                                
                             </LeadText>
                         <div className="text-gray-200">
                         </div>

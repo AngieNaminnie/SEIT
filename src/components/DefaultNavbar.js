@@ -17,14 +17,16 @@ export default function DefaultNavbar() {
     const [openNavbar, setOpenNavbar] = useState(false);
 
     return (
-        <Navbar color="transparent" navbar>
-            <NavbarContainer>
+        <NavbarBrand color="black" navbar>
+            <Navbar>
                 <NavbarWrapper>
                     <a
-                        href="https://material-tailwind.com?ref=mtk"
-                        target="_blank"
-                        rel="noreferrer"
-                    >
+                     section className="pb-10 bg-gray-10 ">
+                     <div class='h-1 text-left mt-1 '>
+                       
+                     </div>
+                
+                    
                         <NavbarBrand>SEIT</NavbarBrand>
                     </a>
                     <NavbarToggler
@@ -33,37 +35,38 @@ export default function DefaultNavbar() {
                     />
                 </NavbarWrapper>
 
+
                 <NavbarCollapse open={openNavbar}>
                     <Nav>
-                        <div className="flex flex-col z-50 lg:flex-row lg:items-left">
+                    <div className="w-full md:w-4/12 px-4 mx-auto flex justify-center mt-24 lg:mt-0">
+                    <span class="inline-block align-baseline ...">...</span>    
                             <NavLink
                                 href="https://material-tailwind.com/documentation/quick-start?ref=mtk"
-                                svg class="w-8 h-8 text-white-500 transition duration-75 dark:text-white-400 group-hover:text-white-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 200"
+                                svg class="w-5 h-5 text-white-500 transition duration-75 dark:text-white-400 group-hover:text-white-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 200"
                                 target="_blank"
                                 rel="noreferrer"
                                 ripple="light"
-                                path d="M2 10a8 8 0 018-8v8h8a8 8 0 20-20 0z"
-                                path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"
                                 
+ 
                                >
-                                &nbsp;Servicios
+                                &nbsp;Inicio
                             </NavLink>
                             <NavLink
-                                href="https://github.com/creativetimofficial/material-tailwind?ref=mtk"
+                                href=""
                                 target="_blank"
                                 rel="noreferrer"
                                 ripple="light"
                             >
                                
-                                &nbsp;Clientes
+                                &nbsp;Servicios
                             </NavLink> <NavLink
-                                href="https://material-tailwind.com/components?ref=mtk"
+                                href=""
                                 target="_blank"
                                 rel="noreferrer"
                                 ripple="light"
                             >
                                 
-                                &nbsp;Components
+                                &nbsp;Clientes
                             </NavLink>
                             <div className="text-white">
                                 <Dropdown
@@ -84,63 +87,56 @@ export default function DefaultNavbar() {
                                     }
                                     ripple="light"
                                 >
-                                    <Link to="/">
+                                    <Link to="/mouses">
                                         <DropdownItem color="lightBlue">
-                                            Landing
+                                            Mouses
                                         </DropdownItem>
                                     </Link>
-                                    <Link to="/profile">
+                                    <Link to="/teclados">
                                         <DropdownItem color="lightBlue">
-                                            Profile
+                                            Teclados
                                         </DropdownItem>
                                     </Link>
-                                    <Link to="/login">
+                                    <Link to="/audifonos">
                                         <DropdownItem color="lightBlue">
-                                            Login
+                                            Audifonos
                                         </DropdownItem>
                                     </Link>
-                                    <Link to="/register">
+                                    <Link to="/cables">
                                         <DropdownItem color="lightBlue">
-                                            Register
+                                            Cables
                                         </DropdownItem>
                                     </Link>
                                 </Dropdown>
                             </div>
                             <NavLink
-                                href="https://github.com/creativetimofficial/material-tailwind?ref=mtk"
+                                href=""
                                 target="_blank"
                                 rel="noreferrer"
                                 ripple="light"
                             >
                                
-                                &nbsp;Clientes
+                                &nbsp;Proyectos
                             </NavLink>
                             <NavLink 
-                                href="https://github.com/creativetimofficial/material-tailwind/issues?ref=mtk"
+                                href=""
                                 target="_blank"
                                 rel="noreferrer"
                                 ripple="light"
                             > 
-                                Issues
-                             </NavLink> 
-                             <a 
-                                href="https://www.creative-tim.com/product/material-tailwind-kit-react"
+                                 Contacto 
+                              </NavLink>  
+                              <a  
+                                href="/home/sarahi/Escritorio/Proyecto_SEIT/src/components/landing/Form.js"
                                 target="_blank"
                                 rel="noreferrer"
-                             > 
-                                 <Button 
-                                    color="transparent"
-                                    className="bg-white text-black ml-4"
-                                    ripple="dark"
-                                 > 
-                                    Free Download
-                                 </Button> 
-                                 </a>
+                              >  
+                                  </a> 
                         </div>
                     </Nav>
                 </NavbarCollapse>
-            </NavbarContainer>
-        </Navbar>
+            </Navbar>
+        </NavbarBrand>
     );
 }
 
