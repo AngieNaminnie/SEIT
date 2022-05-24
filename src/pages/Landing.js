@@ -4,18 +4,26 @@ import Header from 'components/landing/Header';
 import WorkingSection from 'components/landing/WorkingSection';
 import TeamSection from 'components/landing/TeamSection';
 import ContactSection from 'components/landing/ContactSection';
+import ClientsCarousel from 'components/landing/ClientsCarousel';
+import MapCard from 'components/landing/MapCard';
+import Form from 'components/landing/Form';
 
 export default function Landing() {
     return (
         <>
             <div className="absolute w-full z-20">
-                <DefaultNavbar />
+                 <DefaultNavbar /> 
             </div>
             <main>
                 <Header />
                 <WorkingSection />
+            <ClientsCarousel></ClientsCarousel>
                 <TeamSection />
                 <ContactSection />
+                <MapCard/>
+                <Form></Form>
+                
+                
             </main>
             <DefaultFooter />
         </>

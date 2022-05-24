@@ -47,7 +47,11 @@ export default function SimpleFooter() {
                             </li>
                         </ul>
 
-                        <div className="text-sm text-white font-medium">
+                        <div>
+                        
+                        </div>
+
+                        {/* <div className="text-sm text-white font-medium">
                             Copyright © {new Date().getFullYear()} Material
                             Tailwind by{' '}
                             <a
@@ -57,7 +61,7 @@ export default function SimpleFooter() {
                                 Creative Tim
                             </a>
                             .
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </footer>

@@ -1,3 +1,4 @@
+import { useLocation } from 'react-router-dom';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '@material-tailwind/react/Navbar';
@@ -12,129 +13,90 @@ import Dropdown from '@material-tailwind/react/Dropdown';
 import DropdownItem from '@material-tailwind/react/DropdownItem';
 import Icon from '@material-tailwind/react/Icon';
 import Button from '@material-tailwind/react/Button';
+import NavbarInput from '@material-tailwind/react/NavbarInput';
+import Image from '@material-tailwind/react/Image';
+import ProfilePicture from 'assets/img/team-1-800x800.jpg';
 
-export default function DefaultNavbar() {
+export default function DefaultNavbar({ showDefaultNavbar, setShowDefaultNavbar }) {
     const [openNavbar, setOpenNavbar] = useState(false);
-
+    const location= useLocation().pathname;
+    
     return (
-        <NavbarBrand color="black" navbar>
-            <Navbar>
-                <NavbarWrapper>
-                    <a
-                     section className="pb-10 bg-gray-10 ">
-                     <div class='h-1 text-left mt-1 '>
-                       
-                     </div>
-                
+       <NavbarBrand color="" navbar>
+            <Navbar color="transparent">
+                <NavbarWrapper >
+                {/* <nav className=" md:ml-1 py-1 px-1"></nav>  
+                 <div className="container max-w-full mx-auto flex items-center justify-between md:pr-1 md:pl-1"> </div>  
+                 <div className="md:hidden"></div>   */}
+                <Button
+                        color="transparent"
+                        buttonType="link"
+                        size="sm"
+                        iconOnly
+                        rounded
+                        ripple="light"
+                        onClick={() => setShowDefaultNavbar('left-0')}
+                    >
+                        {/* <Icon name="menu" size="2xl" color="white" /> */}
+                    </Button>
                     
-                        <NavbarBrand>SEIT</NavbarBrand>
-                    </a>
-                    <NavbarToggler
-                        onClick={() => setOpenNavbar(!openNavbar)}
-                        color="white"
-                    />
+                        {/* <NavbarBrand></NavbarBrand> */}
+                    {/* <NavbarToggler */}
+                        {/* onClick={() => setOpenNavbar(!openNavbar)} */}
+                        {/* color="white" */}
+
+                         
+                    {/* /> */}
+                    
+                    {/* <div className="flex justify-between items-center w-full"></div> */}
+                     <h4 className="uppercase text-white text-sm tracking-wider mt-1"> 
+                        {location === '/'
+                            ? ''
+                            : location.toUpperCase().replace('/', '')}
+                     </h4>
                 </NavbarWrapper>
 
 
-                <NavbarCollapse open={openNavbar}>
-                    <Nav>
-                    <div className="w-full md:w-4/12 px-4 mx-auto flex justify-center mt-24 lg:mt-0">
-                    <span class="inline-block align-baseline ...">...</span>    
-                            <NavLink
-                                href="https://material-tailwind.com/documentation/quick-start?ref=mtk"
-                                svg class="w-5 h-5 text-white-500 transition duration-75 dark:text-white-400 group-hover:text-white-900 dark:group-hover:text-white" fill="currentColor" viewBox="0 0 20 200"
-                                target="_blank"
-                                rel="noreferrer"
-                                ripple="light"
-                                
- 
-                               >
-                                &nbsp;Inicio
-                            </NavLink>
-                            <NavLink
-                                href=""
-                                target="_blank"
-                                rel="noreferrer"
-                                ripple="light"
+                 {/* <NavbarCollapse open={openNavbar}>  {/*
+                    {/* <Nav> */}
+                    {/* <div className="flex"> */}
+                        {/* <NavbarInput placeholder="Search" /> */}
+
+                        {/* <div className="-mr-1 ml-1"> */}
+                            <Dropdown
+                                color="transparent"
+                                buttonText={
+                                    <div className="w-20 ">
+                                        <Image src={ProfilePicture} rounded />
+                                    </div>
+                                }
+                                rounded
+                                style={{
+                                    padding: 0,
+                                    color: 'transparent',
+                                }}
                             >
-                               
-                                &nbsp;Servicios
-                            </NavLink> <NavLink
-                                href=""
-                                target="_blank"
-                                rel="noreferrer"
-                                ripple="light"
-                            >
-                                
-                                &nbsp;Clientes
-                            </NavLink>
-                            <div className="text-white">
-                                <Dropdown
-                                    color="transparent"
-                                    size="sm"
-                                    buttonType="link"
-                                    buttonText={
-                                        <div className="py-2.5 font-medium flex items-center">
-                                            <Icon
-                                                name="view_carousel"
-                                                size="2xl"
-                                                color="white"
-                                            />
-                                            <span className="ml-2">
-                                                Tienda
-                                            </span>
-                                        </div>
-                                    }
-                                    ripple="light"
-                                >
-                                    <Link to="/mouses">
-                                        <DropdownItem color="lightBlue">
-                                            Mouses
-                                        </DropdownItem>
-                                    </Link>
-                                    <Link to="/teclados">
-                                        <DropdownItem color="lightBlue">
-                                            Teclados
-                                        </DropdownItem>
-                                    </Link>
-                                    <Link to="/audifonos">
-                                        <DropdownItem color="lightBlue">
-                                            Audifonos
-                                        </DropdownItem>
-                                    </Link>
-                                    <Link to="/cables">
-                                        <DropdownItem color="lightBlue">
-                                            Cables
-                                        </DropdownItem>
-                                    </Link>
-                                </Dropdown>
-                            </div>
-                            <NavLink
-                                href=""
-                                target="_blank"
-                                rel="noreferrer"
-                                ripple="light"
-                            >
-                               
-                                &nbsp;Proyectos
-                            </NavLink>
-                            <NavLink 
-                                href=""
-                                target="_blank"
-                                rel="noreferrer"
-                                ripple="light"
-                            > 
-                                 Contacto 
-                              </NavLink>  
-                              <a  
-                                href="/home/sarahi/Escritorio/Proyecto_SEIT/src/components/landing/Form.js"
-                                target="_blank"
-                                rel="noreferrer"
-                              >  
-                                  </a> 
-                        </div>
-                    </Nav>
-                </NavbarCollapse>
+                                <DropdownItem color="red">
+                                   Inicio
+                                </DropdownItem>
+                                <DropdownItem color="red">
+                                   Servicios
+                                </DropdownItem>
+                                <DropdownItem color="red">
+                                   Clientes
+                                </DropdownItem>
+                                <DropdownItem color="red">
+                                   Tienda
+                                </DropdownItem>
+                                <DropdownItem color="red">
+                                    Proyectos
+                                </DropdownItem>
+                                <DropdownItem color="red">
+                                    Contacto
+                                </DropdownItem>
+                            </Dropdown>
+                        {/* </div> */}
+    
             </Navbar>
         </NavbarBrand>
     );

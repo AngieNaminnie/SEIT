@@ -9,12 +9,10 @@ export default function TeamSection() {
     return (
         <section className="pt-20 pb-48">
             <div className="container max-w-7xl mx-auto px-4">
-                <Title heading="Here are our heroes">
-                    According to the National Oceanic and Atmospheric
-                    Administration, Ted, Scambos, NSIDClead scentist, puts the
-                    potentially record maximum.
+                <Title heading="Tienda">
+                    
                 </Title>
-                <div className="flex flex-wrap">
+                {/* <div className="flex flex-wrap">
                     <TeamCard
                         img={Image1}
                         name="Ryan Tompson"
@@ -35,7 +33,7 @@ export default function TeamSection() {
                         name="Jenna Kardi"
                         position="Founder and CEO"
                     />
-                </div>
+                </div> */}
             </div>
         </section>
     );
