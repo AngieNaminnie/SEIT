@@ -89,7 +89,7 @@ export default function Form() {
                             onClick={(e) => e.preventDefault()}
                         >
                             <div className="flex justify-center mt-2">
-                        <Button color="red" ripple="light ">
+                        <Button color="red" ripple="light " size="lg">
                             Enviar
                         </Button>
                     </div>

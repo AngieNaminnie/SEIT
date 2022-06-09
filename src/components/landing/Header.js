@@ -1,32 +1,85 @@
 import H2 from '@material-tailwind/react/Heading2';
 import LeadText from '@material-tailwind/react/LeadText';
-import Portada1 from 'assets/img/Portada-1.jpg';
-import Portada2 from 'assets/img/portada-2.jpg';
-import Portada3 from 'assets/img/portada-3.jpg';
 import React from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 
-export default function Header() {
+
+const Header = () =>{
+  
+    const settings = {
+      dots:true,
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      autoplay: true,
+      speed: 2000,
+      autoplaySpeed: 5000,
+      cssEase: "linear"
+     
+    };
+
+ 
   return (
-      
-    <div className="relative pt-16 pb-32 flex content-center items-center justify-center h-screen">
-    <div className="bg-landing-background bg-cover bg-center absolute top-0 w-full h-full" />
-    <div className="container max-w-8xl relative mx-auto">
-        <div className="items-center flex flex-wrap">
-            <div className="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
-                <H2 color="white">Soluciones Empresariales en Informática Tecnología</H2>
-                <div className="text-gray-200">
-                    <div className="absolute w-full top-1/2 trasform -traslate-y-1/2 px-3 flex justify-between items-center"></div>
-                    
-                    {/* <LeadText color="gray-200">
-                       
-                    </LeadText> */}
+      <div className='bg-gray-100 '>
+      <Slider {...settings} >
+          {/* 1 */}
+          <div className='h-[42.5rem]'>
+          
+              <div className='bg-cover bg-center bg-portada4-background w-full h-full'>
+                <div className="items-center flex flex-wrap ">
+                <div className="w-full lg:w-6/12  px-4 ml-auto mr-auto text-center mt-56">
+                        <H2 className="md:text-md" color="white">Soluciones empresariales en Informatica y tecnología</H2>
+                  </div>
                 </div>
-            </div>
+                </div>
+          </div>
+          {/* 2 */}
+              <div className='h-[42.5rem]'>
+              <div className='bg-cover bg-center bg-portada3-background w-full h-full'>
+                <div className="items-center flex flex-wrap ">
+                <div className="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center mt-56">
+                        <H2 color="white">Soluciones empresariales en Informatica y tecnología</H2>
+                  </div>
+                </div>
+                </div>
+              </div>
+          {/* 3 */}
+              <div className='h-[42.5rem]'>
+              <div className='bg-cover bg-center bg-portada2-background w-full h-full'>
+                <div className="items-center flex flex-wrap ">
+                <div className="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center mt-56">
+                        <H2 color="white">Soluciones empresariales en Informatica y tecnología</H2>
+                  </div>
+                </div>
+                </div>
+                </div>
+                {/* 4 */}
+              <div className='h-[42.5rem] '>
+              <div className='bg-cover bg-center bg-portada5-background w-full h-full'>
+                <div className="items-center flex flex-wrap ">
+                <div className="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center mt-56">
+                        <H2 color="white">Soluciones empresariales en Informatica y tecnología</H2>
+                  </div>
+                </div>
+                </div></div>
+                {/* </div> 
+              <div class="block ig:hidden">
+                <button di="boton" class="flex items-center px-3 py-2 border rouded text-teal-200 border-teal-400 hover:text-white hover:">
+                  <svg class="fill-current h-3 w-3" viewBox="0 0 20 20" xml="https/:Www.w3.org/2000/svg">
+                    <litle>Menú</litle>
+                    <path d="MB 3h20v2h0V3zn0 6h20v2H0V9zn0  6h20v2H0v-2z"></path>
+                  </svg>
+                </button>
+              </div>*/}
+       
+      
+        
+        </Slider> 
         </div>
-    </div>
-</div>
-
-
   );
 }
 
+export default Header;

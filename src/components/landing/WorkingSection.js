@@ -16,16 +16,15 @@ import Licencias from 'assets/img/licencias.jpg';
 import Diseño from 'assets/img/diseño.jpg';
 import Publicidad from 'assets/img/publicidad2.jpg';
 import Computo from 'assets/img/venta.jpg';
-
-
+import  Button  from '@material-tailwind/react/Button';
 
 
 export default function WorkingSection() {
     return ( 
         <section className="pb-20 bg-gray-100 ">
             {/* Servicios */}
-            <div class='h-10 text-center mt-2 '>
-            <H2 >Servicios</H2>  
+            <div class='h-10 text-center mt-8 '>
+            <H2 >Servicios</H2>
             </div>
 
         <div className="container max-w-xl mx-auto px-4 m-20 mb-2">
@@ -38,9 +37,7 @@ export default function WorkingSection() {
                             <CardImage className='rounded-full' alt="Card Image" src={Soporte} /></div>
                             <CardBody className=' text-center' >
                            
-                                {/* <H6 color="gray">Soporte Técnico</H6> */}
-                                <a className='mb-4 text-xl font-serif font-semibold' href='#'>Soporte Técnico</a>
-
+                                <a className='mb-4 text-xl font-serif font-semibold' href='soporte'>Soporte Técnico</a>
                                 <div className='mt-4'>
                                 <Paragraph color="blueGray">
                                 En SEIT nos especializamos en el mantenimiento preventivo 
@@ -57,7 +54,7 @@ export default function WorkingSection() {
                         <div>
                             <CardImage className='rounded-full' alt="Card Image" src={Seguridad} /></div>
                             <CardBody className='md:auto text-center'>
-                                <a className='mb-4 text-xl font-serif font-semibold' href='#'>Sistemas De Seguridad Y Videovigilancia</a>
+                                <a className='mb-4 text-xl font-serif font-semibold' href='/seguridad'>Sistemas De Seguridad Y Videovigilancia</a>
                                 <div className='mt-4'>
                                 <Paragraph color="blueGray">
                                 Lo más importante es la seguridad de tu casa o negocio, por lo que 
@@ -73,7 +70,7 @@ export default function WorkingSection() {
                             <div>
                             <CardImage className='rounded-full' alt="Card Image" src={Redes} /></div>
                             <CardBody className=' text-center'>
-                                <a className='mb-4 text-xl font-serif font-semibold' href='#'>Instalación Y Configuración De Redes</a>
+                                <a className='mb-4 text-xl font-serif font-semibold' href='/redes'>Instalación Y Configuración De Redes</a>
                                 <div className='mt-4'>
                                 <Paragraph color="blueGray">
                                 En el caso de las redes alámbricas e inalámbricas, ofrecemos soluciones 
@@ -89,7 +86,7 @@ export default function WorkingSection() {
                             <div>
                             <CardImage className='rounded-full' alt="Card Image" src={Licencias} /></div>
                             <CardBody className=' text-center'>
-                                <a className='mb-4 text-xl font-serif font-semibold' href='#'>Programas Y Licenciamiento</a>
+                                <a className='mb-4 text-xl font-serif font-semibold' href='/licencias'>Programas Y Licenciamiento</a>
                                 <div className='mt-4'>
                                 <Paragraph color="blueGray">
                                 Contamos con paqueterías de software administrativo, sistemas operativos,
@@ -110,7 +107,7 @@ export default function WorkingSection() {
                             <div>
                             <CardImage className='rounded-full' alt="Card Image" src={Computo} /></div>
                             <CardBody className=' text-center'>
-                                <a className='mb-4 text-xl font-serif font-semibold' href='#'>Venta De Equipo De Computo</a>
+                                <a className='mb-4 text-xl font-serif font-semibold' href='/productos'>Venta De Equipo De Computo</a>
                                 <div className='mt-4'>
                                 <Paragraph color="blueGray">
                                 Contamos con una amplia gama de productos y nuestros precios 
@@ -127,7 +124,7 @@ export default function WorkingSection() {
                             <div>
                             <CardImage className='rounded-full' alt="Card Image" src={Diseño} /></div>
                             <CardBody className=' text-center'>
-                                <a className='mb-4 text-xl font-serif font-semibold' href='#'>Diseño Web</a>
+                                <a className='mb-4 text-xl font-serif font-semibold' href='/diseño'>Diseño Web</a>
                                 <div className='mt-4'>
                                 <Paragraph color="blueGray">
                                 Diseñamos tu página web, desde sitios publicitarios, galerías de imágenes, 
@@ -143,7 +140,7 @@ export default function WorkingSection() {
                             <div>
                             <CardImage className='rounded-full' alt="Card Image" src={Publicidad} /></div>
                             <CardBody className=' text-center'>
-                                <a className='mb-4 text-xl font-serif font-semibold' href='#'>Publicidad</a>
+                                <a className='mb-4 text-xl font-serif font-semibold' href='/publicidad'>Publicidad</a>
                                 <div className='mt-4'>
                                 <Paragraph color="blueGray">
                                 Diseñamos tu imagen corporativa, logotipos, membretes, tarjetas de presentación, 
@@ -159,6 +156,18 @@ export default function WorkingSection() {
                 </div>
 
             
+              
+                        <a href="/services">
+                            <div className="flex justify-center mt-2">
+                        <Button color="red" ripple="light" size="lg">
+                        Más información
+                        </Button>
+                    </div>
+                        </a>
+                   
+
+                
+
             </div>
         </section>
 

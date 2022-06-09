@@ -1,6 +1,6 @@
 import { useLocation } from 'react-router-dom';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Route } from 'react-router-dom';
 import Navbar from '@material-tailwind/react/Navbar';
 import NavbarContainer from '@material-tailwind/react/NavbarContainer';
 import NavbarWrapper from '@material-tailwind/react/NavbarWrapper';
@@ -15,90 +15,76 @@ import Icon from '@material-tailwind/react/Icon';
 import Button from '@material-tailwind/react/Button';
 import NavbarInput from '@material-tailwind/react/NavbarInput';
 import Image from '@material-tailwind/react/Image';
-import ProfilePicture from 'assets/img/team-1-800x800.jpg';
+import ProfilePicture from 'assets/img/logo_seit.png';
+import { BrowserRouter, Switch  } from 'react-router-dom';
 
-export default function DefaultNavbar({ showDefaultNavbar, setShowDefaultNavbar }) {
+
+
+
+
+export default function DefaultNavbar() {
     const [openNavbar, setOpenNavbar] = useState(false);
-    const location= useLocation().pathname;
-    
+
     return (
-       <NavbarBrand color="" navbar>
-            <Navbar color="transparent">
-                <NavbarWrapper >
-                {/* <nav className=" md:ml-1 py-1 px-1"></nav>  
-                 <div className="container max-w-full mx-auto flex items-center justify-between md:pr-1 md:pl-1"> </div>  
-                 <div className="md:hidden"></div>   */}
-                <Button
-                        color="transparent"
-                        buttonType="link"
-                        size="sm"
-                        iconOnly
-                        rounded
-                        ripple="light"
-                        onClick={() => setShowDefaultNavbar('left-0')}
-                    >
-                        {/* <Icon name="menu" size="2xl" color="white" /> */}
-                    </Button>
-                    
-                        {/* <NavbarBrand></NavbarBrand> */}
-                    {/* <NavbarToggler */}
-                        {/* onClick={() => setOpenNavbar(!openNavbar)} */}
-                        {/* color="white" */}
-
-                         
-                    {/* /> */}
-                    
-                    {/* <div className="flex justify-between items-center w-full"></div> */}
-                     <h4 className="uppercase text-white text-sm tracking-wider mt-1"> 
-                        {location === '/'
-                            ? ''
-                            : location.toUpperCase().replace('/', '')}
-                     </h4>
-                </NavbarWrapper>
-
-
-                 {/* <NavbarCollapse open={openNavbar}>  {/*
-                    {/* <Nav> */}
-                    {/* <div className="flex"> */}
-                        {/* <NavbarInput placeholder="Search" /> */}
-
-                        {/* <div className="-mr-1 ml-1"> */}
-                            <Dropdown
-                                color="transparent"
-                                buttonText={
-                                    <div className="w-20 ">
-                                        <Image src={ProfilePicture} rounded />
-                                    </div>
-                                }
-                                rounded
-                                style={{
-                                    padding: 0,
-                                    color: 'transparent',
-                                }}
-                            >
-                                <DropdownItem color="red">
-                                   Inicio
-                                </DropdownItem>
-                                <DropdownItem color="red">
-                                   Servicios
-                                </DropdownItem>
-                                <DropdownItem color="red">
-                                   Clientes
-                                </DropdownItem>
-                                <DropdownItem color="red">
-                                   Tienda
-                                </DropdownItem>
-                                <DropdownItem color="red">
-                                    Proyectos
-                                </DropdownItem>
-                                <DropdownItem color="red">
-                                    Contacto
-                                </DropdownItem>
-                            </Dropdown>
-                        {/* </div> */}
-    
-            </Navbar>
-        </NavbarBrand>
+        <Navbar color="transparent" navbar>
+            <NavbarContainer>
+                
+            <div className="text-white "> 
+              <Dropdown
+                  color="transparent"
+                  buttonText={
+                      <div className="w-20 flex m-0 ">
+                          <Image src={ProfilePicture} rounded />
+                           <Icon name="menu" size="2xl" color="white" />
+                           
+                      </div>   
+                      
+                  }
+                  rounded
+                  style={{
+                   padding: 0,
+                   color: 'transparent',
+                  }}
+                  ripple="light" 
+                  ><div/>
+                 
+                  <Link to="/" >
+                      <DropdownItem color="red">
+                         Inicio
+                      </DropdownItem>
+                  </Link>
+                  <Link to="/services">
+                      <DropdownItem color="red">
+                          Servicios
+                      </DropdownItem>
+                  </Link>
+                  <Link to="/clientes" >
+                      <DropdownItem color="red" >
+                          Clientes
+                      </DropdownItem>
+                  </Link>
+                  <a href='https://www.tienda.seitgdl.com.mx/'>
+                      <DropdownItem color="red">
+                          Tienda
+                      </DropdownItem>
+                  </a>
+                  <Link to="/proyectos">
+                      <DropdownItem color="red">
+                          Proyectos
+                      </DropdownItem>
+                  </Link>
+                  <Link to="/contacto">
+                      <DropdownItem color="red">
+                          Contactos
+                      </DropdownItem>
+                  </Link>
+              </Dropdown>
+              
+          </div>
+              
+            </NavbarContainer>
+        </Navbar>
+       
     );
 }
 

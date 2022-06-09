@@ -7,6 +7,8 @@ import ContactSection from 'components/landing/ContactSection';
 import ClientsCarousel from 'components/landing/ClientsCarousel';
 import MapCard from 'components/landing/MapCard';
 import Form from 'components/landing/Form';
+import ProyectSection from 'components/landing/ProyectSection';
+
 
 export default function Landing() {
     return (
@@ -22,7 +24,8 @@ export default function Landing() {
                 <ContactSection />
                 <MapCard/>
                 <Form></Form>
-                
+               
+           
                 
             </main>
             <DefaultFooter />
